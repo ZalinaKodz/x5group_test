@@ -1,0 +1,17 @@
+{
+  "base": {
+    "logo": "",
+    "project": "X5GroupTests",
+    "environment": "Test",
+    "comment": "any comment here, @ZalinaKodz",
+    "reportLink": "https://jenkins.autotests.cloud",
+    "language": "en",
+    "allureFolder": "allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "5811384304:AAHUGMDvWs5OBval0UYtK0y5v_63BjhmYFo",
+    "chat": "-3106885",
+    "replyTo": ""
+  }
+}
