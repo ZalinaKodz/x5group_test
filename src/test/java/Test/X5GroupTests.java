@@ -72,7 +72,7 @@ public class X5GroupTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверка, что в разделе 'Компания' есть описание миссии компании")
+    @DisplayName("Тест падает, если искать несуществующую строку")
     public void negativeTestForSectionCompany() {
         step("Открываем главную страницу", () -> {
             x5Elements.openPage();
@@ -90,7 +90,7 @@ public class X5GroupTests extends TestBase {
 
     @Test
     @Disabled
-    @DisplayName("Проверка, что по клику на 'EN' сайт переходит на английский")
+    @DisplayName("По клику на 'EN' сайт переходит на английский")
     public void skippedTestCheckingTranslation() {
         step("Открываем главную страницу", () -> {
             x5Elements.openPage();
