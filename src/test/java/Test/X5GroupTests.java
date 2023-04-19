@@ -9,7 +9,7 @@ import static io.qameta.allure.Allure.step;
 public class X5GroupTests extends TestBase {
     X5Elements x5Elements = new X5Elements();
     @Test
-    @DisplayName("Проверка, что в разделе 'Карьера' есть описание миссии компании")
+    @DisplayName("Проверка работы поиска")
     public void checkSearchResult() {
         step("Открываем главную страницу", () -> {
             x5Elements.openPage();
@@ -30,7 +30,7 @@ public class X5GroupTests extends TestBase {
 
     @Test
     @DisplayName("Проверка, что в разделе 'Карьера' есть описание миссии компании")
-    public void checkСareerSectionTest() {
+    public void checkCareerSectionTest() {
         step("Открываем главную страницу", () -> {
             x5Elements.openPage();
         });
