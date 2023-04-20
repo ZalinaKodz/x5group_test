@@ -17,7 +17,7 @@ public class X5GroupTests extends TestBase {
         step("Кликаем по значку поиска", () -> {
             x5Elements.clickSearchIcon();
         });
-        step("Вводим в поле поиска 'Открытие'", () -> {
+        step("Вводим в поле поиска значение 'Открытие'", () -> {
             x5Elements.enterInSearchField("Открытие");
         });
         step("Скроллим страницу до результатов поиска", () -> {

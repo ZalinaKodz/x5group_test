@@ -4,7 +4,7 @@
     "project": "X5GroupTests",
     "environment": "Test",
     "comment": "any comment here, @ZalinaKodz",
-    "reportLink": "https://jenkins.autotests.cloud",
+    "reportLink": "https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/",
     "language": "en",
     "allureFolder": "allure-report/",
     "enableChart": true
