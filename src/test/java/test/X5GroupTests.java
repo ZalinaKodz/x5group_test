@@ -1,4 +1,4 @@
-package Test;
+package test;
 
 import org.junit.jupiter.api.*;
 import pages.X5Elements;
@@ -72,7 +72,7 @@ public class X5GroupTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Тест падает, если искать несуществующую строку")
+    @DisplayName("Поиск несуществующей строки в разделе 'Компания'")
     public void negativeTestForSectionCompany() {
         step("Открываем главную страницу", () -> {
             x5Elements.openPage();
@@ -83,7 +83,7 @@ public class X5GroupTests extends TestBase {
         step("Скроллим до раздела 'Работа в X5 Group'", () -> {
             x5Elements.scrollWorkingAtX5(true);
         });
-        step("Проверяем, что тест падает если искать по тексту количество работников != 353 000 ", () -> {
+        step("Проверяем отсутствие в тексте значения '343000' как количества работников", () -> {
             x5Elements.checkNumberOfEmployees();
         });
     }

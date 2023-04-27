@@ -135,7 +135,7 @@ public class X5Elements {
     }
 
     public X5Elements checkNumberOfEmployees() {
-        checkNumberInText.should(exist);
+        checkNumberInText.shouldNot(exist);
 
         return this;
     }
