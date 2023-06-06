@@ -4,6 +4,7 @@ import org.junit.jupiter.api.*;
 import pages.MainPage;
 
 import static io.qameta.allure.Allure.step;
+import static test.TestData.*;
 
 @Tag("X5Group")
 public class MainPageTest extends TestBase  {
@@ -18,7 +19,7 @@ public class MainPageTest extends TestBase  {
             mainPage.clickSearchIcon();
         });
         step("Вводим в поле поиска значение 'Открытие'", () -> {
-            mainPage.enterInSearchField("Открытие");
+            mainPage.enterInSearchField(searchWord);
         });
         step("Скроллим страницу до результатов поиска", () -> {
             mainPage.scrollToResultOfSearch(true);
@@ -42,7 +43,7 @@ public class MainPageTest extends TestBase  {
             mainPage.goToFooter(true);
         });
         step("Проверяем, что на адресс компании отображается на английском", () -> {
-            mainPage.checkAddress("119049, Russia, Moscow, Koroviy Val street, 5, building 1");
+            mainPage.checkAddress(address);
         });
     }
 
@@ -62,19 +63,19 @@ public class MainPageTest extends TestBase  {
             mainPage.setUserCommercialNetwork();
         });
         step("Вводим ФИО", () -> {
-            mainPage.setName("Иванов Иван");
+            mainPage.setName(userName);
         });
         step("Вводим email", () -> {
-            mainPage.setEmail("ivanov777@mail.ru");
+            mainPage.setEmail(userEmail);
         });
         step("Вводим телефон", () -> {
-            mainPage.setNumber("9287174566");
+            mainPage.setNumber(userPhoneNumber);
         });
         step("Вводим город", () -> {
-            mainPage.setUserCity("Москва");
+            mainPage.setUserCity(city);
         });
         step("Вводим обращение", () -> {
-            mainPage.setMessageText("благодарность");
+            mainPage.setMessageText(messageText);
         });
         step("Нажимаем кнопку 'Отправить'", () -> {
             mainPage.clickButtonSubmit();

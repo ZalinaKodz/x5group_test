@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import pages.PressCenterPage;
 
 import static io.qameta.allure.Allure.step;
+import static test.TestData.userEmail;
 
 @Tag("X5Group")
 public class PressCenterPageTest extends TestBase{
@@ -23,7 +24,7 @@ public class PressCenterPageTest extends TestBase{
             pressCenterPage.scrollToEmail(true);
         });
         step("Вводим в поле 'E-mail электронный адрес ", () -> {
-            pressCenterPage.setUserEmail("ivanov77@nail.ru" );
+            pressCenterPage.setUserEmail(userEmail);
         });
         step("Нажимаем кнопку 'Подписаться'", () -> {
             pressCenterPage.subscribeNews();

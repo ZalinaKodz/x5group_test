@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import pages.ConsumerPage;
 
 import static io.qameta.allure.Allure.step;
+import static test.TestData.allPublication;
+import static test.TestData.section;
 
 @Tag("X5Group")
 public class ConsumerPageTest extends TestBase {
@@ -20,13 +22,13 @@ public class ConsumerPageTest extends TestBase {
             consumerPage.scrollSectionConsumer(true);
         });
         step("Выбираем 'Найти рецепт и подобрать ингредиенты'", () -> {
-            consumerPage.choosePlanning("Найти рецепт и подобрать ингредиенты");
+            consumerPage.choosePlanning(section);
         });
         step("Скроллим до раздела 'Новости'", () -> {
             consumerPage.scrollSectionNews(true);
         });
         step("Переходим в раздел 'Все публикации'", () -> {
-            consumerPage.clickAllPublication("Все публикации");
+            consumerPage.clickAllPublication(allPublication);
         });
         step("Выбираем первую статью в списке", () -> {
             consumerPage.getFistPublication();

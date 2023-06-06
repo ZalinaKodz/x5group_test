@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import pages.CareerPage;
 
 import static io.qameta.allure.Allure.step;
+import static test.TestData.missionOfCompany;
+import static test.TestData.sectionCareer;
 
 
 @Tag("X5Group")
@@ -19,13 +21,13 @@ public class CareerPageTest extends TestBase{
             careerPage.openPage();
         });
         step("Переходим в раздел 'Карьера'", () -> {
-            careerPage.chooseSectionCareer("Карьера");
+            careerPage.chooseSectionCareer(sectionCareer);
         });
         step("Скроллим до раздела 'Работа в X5 Group'", () -> {
             careerPage.scrollIntoView(true);
         });
-        step("Проверяем, что на странице есть текст: 'Наша миссия — улучшать качество жизни людей'", () -> {
-            careerPage.checkTextMission("Наша миссия — улучшать качество жизни людей");
+        step("Проверяем, что на странице есть текст миссии компании", () -> {
+            careerPage.checkTextMission(missionOfCompany);
         });
     }
 
