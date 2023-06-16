@@ -2,13 +2,16 @@ package test;
 
 import org.junit.jupiter.api.*;
 import pages.MainPage;
+import utils.TestData;
 
 import static io.qameta.allure.Allure.step;
-import static test.TestData.*;
+
 
 @Tag("X5Group")
-public class MainPageTest extends TestBase  {
+public class MainPageTest extends TestBase {
     MainPage mainPage = new MainPage();
+    TestData testData = new TestData();
+
     @Test
     @DisplayName("Проверка работы поиска")
     public void checkSearchResult() {
@@ -19,7 +22,7 @@ public class MainPageTest extends TestBase  {
             mainPage.clickSearchIcon();
         });
         step("Вводим в поле поиска значение 'Открытие'", () -> {
-            mainPage.enterInSearchField(searchWord);
+            mainPage.enterInSearchField(testData.searchWord);
         });
         step("Скроллим страницу до результатов поиска", () -> {
             mainPage.scrollToResultOfSearch(true);
@@ -30,7 +33,6 @@ public class MainPageTest extends TestBase  {
     }
 
     @Test
-    @Disabled
     @DisplayName("По клику на 'EN' сайт переходит на английский")
     public void skippedTestCheckingTranslation() {
         step("Открываем главную страницу", () -> {
@@ -43,7 +45,7 @@ public class MainPageTest extends TestBase  {
             mainPage.goToFooter(true);
         });
         step("Проверяем, что на адресс компании отображается на английском", () -> {
-            mainPage.checkAddress(address);
+            mainPage.checkAddress(testData.address);
         });
     }
 
@@ -63,19 +65,19 @@ public class MainPageTest extends TestBase  {
             mainPage.setUserCommercialNetwork();
         });
         step("Вводим ФИО", () -> {
-            mainPage.setName(userName);
+            mainPage.setName(testData.userName);
         });
         step("Вводим email", () -> {
-            mainPage.setEmail(userEmail);
+            mainPage.setEmail(testData.userEmail);
         });
         step("Вводим телефон", () -> {
-            mainPage.setNumber(userPhoneNumber);
+            mainPage.setNumber(testData.userPhoneNumber);
         });
         step("Вводим город", () -> {
-            mainPage.setUserCity(city);
+            mainPage.setUserCity(testData.city);
         });
         step("Вводим обращение", () -> {
-            mainPage.setMessageText(messageText);
+            mainPage.setMessageText(testData.messageText);
         });
         step("Нажимаем кнопку 'Отправить'", () -> {
             mainPage.clickButtonSubmit();

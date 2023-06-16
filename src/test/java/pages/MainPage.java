@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
@@ -34,7 +35,7 @@ public class MainPage {
 
 
     public MainPage openPage() {
-        open("https://www.x5.ru/ru/");
+        open(baseUrl);
 
         return this;
     }
@@ -124,16 +125,19 @@ public class MainPage {
 
         return this;
     }
+
     public MainPage setMessageText(String value) {
         setMessage.setValue(value);
 
         return this;
     }
+
     public MainPage clickButtonSubmit() {
         submitButton.click();
 
         return this;
     }
+
     public MainPage checkModalisOpen() {
         feedbackModal.shouldHave(exist);
 
