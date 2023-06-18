@@ -24,7 +24,7 @@ public class TestBase {
         Configuration.browserSize = webDriverConfig.browserSize();
         Configuration.baseUrl = webDriverConfig.baseUrl();
         Configuration.pageLoadStrategy = "eager";
-        if (webDriverConfig.isRemote()!= null) {
+        if (webDriverConfig.isRemote()) {
             Configuration.remote = webDriverConfig.remoteUrl();
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
